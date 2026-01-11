@@ -14,7 +14,8 @@ FROM eclipse-temurin:17-jre
 WORKDIR /app
 
 # Copy the built jar from stage 1
-COPY --from=build /app/target/CryptoVerse-0.0.1-SNAPSHOT.jar ./CryptoVerse.jar
+# Copy the built jar from stage 1
+COPY --from=build /app/target/CryptoCompare-0.0.1-SNAPSHOT.jar ./CryptoVerse.jar
 
 # Command to run your app
 CMD ["java", "-jar", "CryptoVerse.jar"]
